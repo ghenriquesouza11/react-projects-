@@ -1,7 +1,9 @@
-import React from 'react';
+import data from './data';
 
-const Categories = () => {
-  return <h2>categories component</h2>;
-};
+const repeatedCategories = ['all'];
 
-export default Categories;
+data.forEach((element) => repeatedCategories.push(element.category));
+
+const categories = Array.from(new Set(repeatedCategories));
+
+export default categories;

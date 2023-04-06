@@ -29,11 +29,15 @@ hr {
 }
 
 .buttons-list {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   list-style: none;
 }
 
 .buttons-list_item {
-  display: inline-block;
+  margin: auto;
 }
 
 
@@ -62,6 +66,7 @@ hr {
 .items-list {
   align-items: flex-start;
   display: grid;
+  grid-auto-rows: 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
   justify-content: center;
@@ -79,8 +84,10 @@ hr {
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  height: 462px;
+  justify-content: flex-start;
   margin-bottom: 50px;
+  min-width: 310px;
   overflow: hidden;
   width: 23vw;
 }
@@ -116,4 +123,69 @@ hr {
 
 .item-desc {
   color: #64748b;
+}
+
+@media ( max-width : 1100px ) and ( min-width : 851px ) {
+
+  .items-list {
+    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    justify-content: center;
+    list-style: none;
+  }
+
+  .item {
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 50px;
+    min-width: 310px;
+    overflow: hidden;
+    width: 30vw;
+  }
+}
+
+@media ( max-width : 850px ) {
+
+  .buttons-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style: none;
+  }
+
+  .buttons-list_item {
+    margin: auto;
+  }
+
+  .category-btn {
+    margin: 0 10px;
+    margin-bottom: 20px;
+  }
+
+  .items-list {
+    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    justify-content: center;
+    list-style: none;
+  }
+
+  .item {
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 50px;
+    min-width: 310px;
+    overflow: hidden;
+    width: 30vw;
+  }
 }

@@ -1,0 +1,53 @@
+.company-article {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  max-width: 1000px;
+  padding: 0 5rem;
+}
+
+.company-title {
+  font-size: 2rem;
+}
+
+.company-name {
+  background-color: #cbd5e1;
+  border-radius: 3px;
+  padding: 5px 10px;
+}
+
+.company-dates {
+  color: #64748b;
+}
+
+.company-dutie-list {
+  list-style: none;
+}
+
+.company-dutie-item {
+  align-items: center;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 3rem 1fr;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.company-dutie {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+}
+
+@media ( max-width : 800px ) {
+
+  .company-article {
+    padding: 0 50px;
+    width: 100vw;
+  }
+
+  .company-dutie {
+    font-size: 1rem;
+  }
+}

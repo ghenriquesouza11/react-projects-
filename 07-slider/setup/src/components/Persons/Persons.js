@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import data from '../../data';
@@ -25,6 +25,12 @@ function Persons(props) {
       dispatch(previousPerson(currentPerson - 1));
     }
   };
+
+  useEffect(() => {
+    const sliderParam = 3000;
+    const slider = setInterval(() => { setNextPerson(); }, sliderParam);
+    return () => clearInterval(slider);
+  }, [currentPerson]);
 
   return (
     <section className="persons">

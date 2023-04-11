@@ -6,7 +6,7 @@
   justify-content: center;
   text-align: center;
   transition: 0.3s;
-  width: 60vw;
+  width: 40vw;
 }
 
 .person-img {
@@ -55,6 +55,10 @@
 }
 
 @media ( max-width : 450px ) {
+
+  .person-article {
+    width: 65vw;
+  }
 
   .person-quote {
     font-size: 1rem;

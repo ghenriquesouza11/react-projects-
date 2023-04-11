@@ -1,0 +1,62 @@
+.person-article {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  text-align: center;
+  transition: 0.3s;
+  width: 60vw;
+}
+
+.person-img {
+  border: 4px solid #ddd6fe;
+  border-radius: 50%;
+  height: 150px;
+  object-fit: cover;
+  width: 150px;
+}
+
+.person-name {
+  color: #8b5cf6;
+  font-size: 1.9em;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.person-title {
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.person-quote {
+  color: #64748b;
+  font-size: 1.15rem;
+  line-height: 2rem;
+  text-align: center;
+}
+
+.next-person {
+  opacity: 0;
+  position: absolute;
+  transform: translateX(100%);
+  z-index: -1;
+}
+
+.previous-person {
+  transform: translateX(-100%);
+  z-index: -1;
+}
+
+.current-person {
+  opacity: 1;
+  position: static;
+  transform: translateX(0);
+}
+
+@media ( max-width : 450px ) {
+
+  .person-quote {
+    font-size: 1rem;
+  }
+}

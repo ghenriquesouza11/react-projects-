@@ -1,9 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
-import { FaQuoteRight } from 'react-icons/fa';
-import data from './data';
+import React from 'react';
+import { connect } from 'react-redux';
+import Persons from './components/Persons/Persons';
+
 function App() {
-  return <h2>slider project setup</h2>;
+  return (
+    <main>
+      <Persons />
+    </main>
+  );
 }
 
-export default App;
+export default connect()(App);

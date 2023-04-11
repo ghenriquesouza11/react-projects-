@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 const people = [
   {
     id: 1,

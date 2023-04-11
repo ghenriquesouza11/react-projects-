@@ -1,0 +1,11 @@
+.change-person-btn {
+  border-radius: 3px;
+  color: #64748b;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 32px;
+}
+
+.change-person-btn:hover {
+  color: #8b5cf6;
+}

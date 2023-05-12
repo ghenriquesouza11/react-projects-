@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
+import './MainForm.css';
+
 function MainForm(props) {
   const { setParagraphs } = props;
 
@@ -12,7 +14,10 @@ function MainForm(props) {
   };
 
   return (
-    <form onSubmit={ (e) => handleGenerateSubmit(e) }>
+    <form
+      onSubmit={ (e) => handleGenerateSubmit(e) }
+      className="main-form"
+    >
       <label>
         Parágrafos:
         <input
@@ -23,7 +28,12 @@ function MainForm(props) {
           onChange={ ({ target }) => setParagraphsAmount(target.value) }
         />
       </label>
-      <button type="submit"> Gerar </button>
+      <button
+        type="submit"
+        className="submit-btn"
+      >
+        Gerar
+      </button>
     </form>
   );
 }

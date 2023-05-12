@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
-import data from './data';
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
+import LoremGenerator from './pages/LoremGenerator';
 
 function App() {
   return (
-    <h2>lorem ipsum project setup</h2>
+    <Switch>
+      <Route exact path="/" component={ LoremGenerator } />
+    </Switch>
   );
 }
 

@@ -9,6 +9,7 @@
     "@trybe/eslint-config-frontend": "^1.11.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^5.3.4",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -34,6 +35,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react-router-dom": "^5.3.3",
     "eslint": "^8.40.0",
     "eslint-plugin-react": "^7.32.2",
     "stylelint": "^15.6.1",

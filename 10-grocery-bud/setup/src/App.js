@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react'
-import List from './List'
-import Alert from './Alert'
+import React from 'react';
+import List from './List';
 
 function App() {
-  return <h2>grocery bud setup</h2>
+  return (
+    <List />
+  );
 }
 
-export default App
+export default App;

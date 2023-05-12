@@ -1,8 +1,5 @@
 .lorem-section {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
   position: relative;
+  text-align: center;
   top: 20%;
 }

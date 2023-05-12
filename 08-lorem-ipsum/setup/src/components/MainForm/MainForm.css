@@ -3,6 +3,7 @@
   display: flex;
   gap: 10px;
   justify-content: center;
+  margin: 30px;
 }
 
 .main-form label {

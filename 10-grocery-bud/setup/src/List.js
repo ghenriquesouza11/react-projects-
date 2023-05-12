@@ -81,7 +81,7 @@ function List() {
             className="submit-btn"
             type="submit"
           >
-            Add Item
+            Adicionar Item
 
           </button>
         </form>

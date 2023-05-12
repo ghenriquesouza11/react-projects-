@@ -5,6 +5,8 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import { setItem, getItem } from './Services/LocalStorage';
 
+import Trash from './SVGs/Trash';
+
 function List() {
   const [itemInput, setItemInput] = useState('');
   const savedGroceries = getItem('groceries');
@@ -36,7 +38,7 @@ function List() {
 
   const checkItem = (index) => {
     setGroceryItems(groceryItems.map((item, i) => {
-      if (i !== index + 1) return item;
+      if (i !== index) return item;
       return { ...item, completed: !item.completed };
     }));
   };
@@ -95,7 +97,7 @@ function List() {
                       type="checkbox"
                       checked={ completed }
                       name={ `item${name}` }
-                      onClick={ () => checkItem(index) }
+                      onClick={ () => checkItem(index + 1) }
                     />
                     {name}
                   </label>
@@ -103,7 +105,7 @@ function List() {
                     className="delete-button"
                     onClick={ () => deleteItem(id) }
                   >
-                    Delete
+                    <Trash />
                   </button>
                 </li>
               );

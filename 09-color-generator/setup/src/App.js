@@ -1,10 +1,14 @@
-import React, { useState } from 'react'
-import SingleColor from './SingleColor'
+import React from 'react';
 
-import Values from 'values.js'
+import { Route, Routes } from 'react-router-dom';
+import ColorsPage from './pages/ColorsPage/ColorsPage';
 
 function App() {
-  return <h2>color generator project</h2>
+  return (
+    <Routes>
+      <Route exact path="/" Component={ ColorsPage } />
+    </Routes>
+  );
 }
 
-export default App
+export default App;

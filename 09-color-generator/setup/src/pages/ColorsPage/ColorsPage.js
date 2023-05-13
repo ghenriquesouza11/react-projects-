@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import ColorForm from '../../components/ColorForm/ColorForm';
+import ColorsList from '../../components/ColorsList/ColorsList';
 
 function ColorsPage() {
+  const [color, setColor] = useState('red');
   return (
-    <ColorForm />
+    <section>
+      <ColorForm
+        setColor={ setColor }
+      />
+      <ColorsList
+        color={ color }
+      />
+    </section>
   );
 }
 

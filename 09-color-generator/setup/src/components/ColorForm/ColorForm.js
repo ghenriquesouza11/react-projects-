@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
-function ColorForm() {
+function ColorForm(props) {
+  const { setColor } = props;
+
   const [colorInput, setColorInput] = useState('');
 
   const submitColorForm = (event) => {
     event.preventDefault();
-    console.log('Botão funcionando!');
+    setColor(colorInput);
   };
   return (
     <form onSubmit={ (event) => submitColorForm(event) }>
@@ -21,5 +24,9 @@ function ColorForm() {
     </form>
   );
 }
+
+ColorForm.propTypes = {
+  setColor: PropTypes.func.isRequired,
+};
 
 export default ColorForm;

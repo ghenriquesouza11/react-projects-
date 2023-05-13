@@ -1,8 +1,10 @@
 import React from 'react';
 
+import ColorForm from '../../components/ColorForm/ColorForm';
+
 function ColorsPage() {
   return (
-    <p>Colors Page</p>
+    <ColorForm />
   );
 }
 

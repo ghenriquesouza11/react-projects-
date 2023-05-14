@@ -13,8 +13,41 @@
 .copy-button {
   background-color: inherit;
   border: none;
+  cursor: pointer;
+}
+
+@keyframes myAnim {
+
+  0%, 100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 100%;
+  }
+
+  10% {
+    transform: rotate(1deg);
+  }
+
+  20%, 40%, 60% {
+    transform: rotate(-3deg);
+  }
+
+  30%, 50%, 70% {
+    transform: rotate(3deg);
+  }
+
+  80% {
+    transform: rotate(-1deg);
+  }
+
+  90% {
+    transform: rotate(1deg);
+  }
 }
 
 .copy-svg {
   height: 32px;
+}
+
+.copy-svg:hover {
+  animation: myAnim 0.6s ease 0s 1 normal forwards;
 }

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
+import './ColorForm.css';
+
 function ColorForm(props) {
   const { setColor } = props;
 
@@ -11,16 +13,27 @@ function ColorForm(props) {
     setColor(colorInput);
   };
   return (
-    <form onSubmit={ (event) => submitColorForm(event) }>
+    <form
+      className="color-form"
+      onSubmit={ (event) => submitColorForm(event) }
+    >
       <label>
         Gerador de cores
         <input
+          placeholder="#ff3333"
+          className="color-input"
           value={ colorInput }
           onChange={ ({ target }) => setColorInput(target.value) }
           type="text"
         />
       </label>
-      <button type="submit"> Buscar </button>
+      <button
+        className="color-form-submit-btn"
+        type="submit"
+        style={ { backgroundColor: colorInput } }
+      >
+        Buscar
+      </button>
     </form>
   );
 }

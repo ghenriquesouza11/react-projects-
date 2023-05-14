@@ -5,14 +5,14 @@ import './SingleColor.css';
 
 function SingleColor(props) {
   const { color, weight, type } = props;
-  const verifyType = type === 'tint';
+  const verifyType = type === 'shade';
   return (
     <article
       className="single-color"
-      style={ { backgroundColor: color, color: verifyType ? 'black' : 'white' } }
+      style={ { backgroundColor: color, color: verifyType ? 'white' : 'black' } }
     >
-      <p>{color}</p>
       <p>{ weight }</p>
+      <p>{color}</p>
     </article>
   );
 }

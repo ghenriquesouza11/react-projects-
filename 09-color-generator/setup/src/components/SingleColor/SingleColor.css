@@ -3,3 +3,18 @@
   padding-left: 25px;
   padding-top: 25px;
 }
+
+.color-info {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.copy-button {
+  background-color: inherit;
+  border: none;
+}
+
+.copy-svg {
+  height: 32px;
+}

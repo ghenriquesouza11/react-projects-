@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import Copy from '../../svgs/Copy';
+
 import './SingleColor.css';
 
 function SingleColor(props) {
@@ -11,8 +13,14 @@ function SingleColor(props) {
       className="single-color"
       style={ { backgroundColor: color, color: verifyType ? 'white' : 'black' } }
     >
-      <p>{ weight }</p>
-      <p>{color}</p>
+      <div className="color-info">
+        <p>{ `${weight} ${color}` }</p>
+        <button className="copy-button">
+          <Copy
+            stroke={ verifyType ? 'white' : 'black' }
+          />
+        </button>
+      </div>
     </article>
   );
 }

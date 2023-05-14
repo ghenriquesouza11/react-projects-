@@ -1,4 +1,6 @@
 import React from 'react';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import PropTypes from 'prop-types';
 
 import copy from 'copy-to-clipboard';
@@ -13,6 +15,16 @@ function SingleColor(props) {
 
   const handleCopyButton = () => {
     copy(color);
+    toast.success('Cor copiada!', {
+      position: 'top-right',
+      autoClose: 3000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: 'light',
+    });
   };
   return (
     <article

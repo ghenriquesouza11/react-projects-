@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { ToastContainer } from 'react-toastify';
 
 import ColorForm from '../../components/ColorForm/ColorForm';
 import ColorsList from '../../components/ColorsList/ColorsList';
@@ -14,6 +15,18 @@ function ColorsPage() {
       />
       <ColorsList
         color={ color }
+      />
+      <ToastContainer
+        position="top-right"
+        autoClose={ 3000 }
+        hideProgressBar
+        newestOnTop={ false }
+        closeOnClick
+        rtl={ false }
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover={ false }
+        theme="light"
       />
     </section>
   );

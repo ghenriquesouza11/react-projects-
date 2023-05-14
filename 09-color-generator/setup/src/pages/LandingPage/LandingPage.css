@@ -1,0 +1,125 @@
+.landing-page-section {
+  align-items: center;
+  display: flex;
+  gap: 150px;
+  height: 100vh;
+  justify-content: center;
+}
+
+.landing-page-text {
+  align-items: start;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-content: center;
+  width: 30vw;
+}
+
+.landing-page-title {
+  font-family: Merriweather Sans , sans-serif;
+  font-size: 2rem;
+}
+
+.landing-page-desc {
+  font-family: Open Sans , sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.08rem;
+  line-height: 1.3rem;
+}
+
+.landing-page-choose-btn {
+  background-color: #efbb72;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  height: 60px;
+  outline: none;
+  position: relative;
+  width: 240px;
+}
+
+.landing-page-choose-btn:before {
+  animation: glowing 20s linear infinite;
+  background: linear-gradient(90deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+  background-size: 200%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  content: '';
+  filter: blur(5px);
+  height: calc(50% + 4px);
+  left: -2px;
+  opacity: 0;
+  position: absolute;
+  top: -2px;
+  transition: opacity 0.3s ease-in-out;
+  width: calc(100% + 4px);
+  z-index: -1;
+}
+
+.landing-page-choose-btn:hover:before {
+  opacity: 1;
+}
+
+.landing-page-choose-btn:hover.landing-page-choose-btn:after {
+  opacity: 1;
+}
+
+.landing-page-choose-btn:after {
+  animation: glowing-reverse 20s linear infinite;
+  background: linear-gradient(90deg, #dd00f3, #dd00f3, #2b1de8, #1ddde8, #1de840, #e3e81d, #e8b71d, #e81d1d, #ff2400, #dd00f3, #dd00f3, #2b1de8, #1ddde8, #1de840, #e3e81d, #e8b71d, #e81d1d, #ff2400);
+  background-size: 200%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  content: '';
+  filter: blur(5px);
+  height: calc(50% + 4px);
+  left: -2px;
+  opacity: 0;
+  position: absolute;
+  top: calc(50% - 2px);
+  transition: opacity 0.3s ease-in-out;
+  width: calc(100% + 4px);
+  z-index: -1;
+}
+
+@keyframes glowing {
+
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 400% 0;
+  }
+}
+
+@keyframes glowing-reverse {
+
+  0% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.landing-page-choose-btn a {
+  align-items: center;
+  color: black;
+  cursor: pointer;
+  display: flex;
+  font-family: Open Sans , sans-serif;
+  height: 100%;
+  justify-content: center;
+  letter-spacing: 0.05rem;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+
+.choosing-colors {
+  height: 75vh;
+}
+

@@ -4,6 +4,8 @@ import Values from 'values.js';
 
 import SingleColor from '../SingleColor/SingleColor';
 
+import './ColorsList.css';
+
 function ColorsList(props) {
   const { color } = props;
   const colorValues = new Values(color);
@@ -11,16 +13,22 @@ function ColorsList(props) {
   const allColorValues = colorValues.all(shadesParam);
   console.log(allColorValues);
   return (
-    allColorValues.map((singleColor) => {
-      const { hex, weight } = singleColor;
-      return (
-        <SingleColor
-          key={ hex }
-          weight={ `${weight}%` }
-          color={ `#${hex}` }
-        />
-      );
-    })
+    <ul className="colors-list">
+      {
+        allColorValues.map((singleColor) => {
+          const { hex, weight, type } = singleColor;
+          return (
+            <li key={ hex }>
+              <SingleColor
+                weight={ `${weight}%` }
+                color={ `#${hex}` }
+                type={ type }
+              />
+            </li>
+          );
+        })
+      }
+    </ul>
   );
 }
 

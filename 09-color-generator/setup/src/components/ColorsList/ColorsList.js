@@ -8,10 +8,10 @@ import './ColorsList.css';
 
 function ColorsList(props) {
   const { color } = props;
-  const colorValues = new Values(color);
+
   const shadesParam = 10;
-  const allColorValues = colorValues.all(shadesParam);
-  console.log(allColorValues);
+  const allColorValues = new Values(color).all(shadesParam);
+
   return (
     <ul className="colors-list">
       {

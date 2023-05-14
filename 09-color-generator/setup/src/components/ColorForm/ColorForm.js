@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import './ColorForm.css';
+import Values from 'values.js';
+
+import { toast } from 'react-toastify';
 
 function ColorForm(props) {
   const { setColor } = props;
@@ -10,7 +13,22 @@ function ColorForm(props) {
 
   const submitColorForm = (event) => {
     event.preventDefault();
-    setColor(colorInput);
+    try {
+      const shadesParam = 10;
+      new Values(colorInput).all(shadesParam);
+      setColor(colorInput);
+    } catch (error) {
+      toast.error('Cor inválida!', {
+        position: 'top-right',
+        autoClose: 3000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        theme: 'light',
+      });
+    }
   };
   return (
     <form
@@ -20,6 +38,7 @@ function ColorForm(props) {
       <label>
         Gerador de cores
         <input
+          required
           placeholder="#ff3333"
           className="color-input"
           value={ colorInput }

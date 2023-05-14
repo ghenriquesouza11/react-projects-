@@ -20,7 +20,7 @@ function ColorsPage() {
         position="top-right"
         autoClose={ 3000 }
         hideProgressBar
-        newestOnTop={ false }
+        newestOnTop
         closeOnClick
         rtl={ false }
         pauseOnFocusLoss
